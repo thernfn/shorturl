@@ -1,0 +1,6 @@
+{:db {:dbtype "mysql"
+      :host "planetscale-host-somewhere"
+      :dbname "shorturl"
+      :user "planetscale-username"
+      :password "maybe-planetscale-password"}
+ :server {:port 3001}}

@@ -1,0 +1,17 @@
+{:paths ["src" "resources"]
+ :deps
+ {org.clojure/clojure {:mvn/version "1.11.1"}
+  io.pedestal/pedestal.service {:mvn/version "0.5.10"}
+  io.pedestal/pedestal.immutant {:mvn/version "0.5.10"}
+  org.slf4j/slf4j-simple {:mvn/version "1.7.36"}
+  org.clojure/java.jdbc {:mvn/version "0.7.12"}
+  mysql/mysql-connector-java {:mvn/version "8.0.30"}
+  honeysql/honeysql {:mvn/version "1.0.461"}
+  ring/ring-devel {:mvn/version "1.10.0"}
+  metosin/muuntaja {:mvn/version "0.6.8"}
+  party.donut/system {:git/url "https://github.com/donut-party/system.git"
+                      :git/sha "d09e3a665bce812a11157daf82f29a879a1ba504"}}
+
+ :aliases
+ {:dev {:extra-paths ["test" "dev" "dev-resources"]
+        :jvm-opts ["-XX:-OmitStackTraceInFastThrow"]}}}
