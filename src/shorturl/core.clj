@@ -1,6 +1,5 @@
 (ns shorturl.core
-  (:require [io.pedestal.http.route :as route]
-            [io.pedestal.http.body-params :refer [body-params]]
+  (:require [io.pedestal.http.body-params :refer [body-params]]
             [ring.util.response :as r]
             [muuntaja.interceptor :as mi]
             [shorturl.db :as db]
