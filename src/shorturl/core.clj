@@ -7,13 +7,13 @@
             [shorturl.slug :refer [generate-slug]]))
 
 (defn redirect [{{:keys [slug]} :path-params}]
-  (if-let [url (db/get-url db/mysql-db slug)]
+  (if-let [url (db/get-url db/conn slug)]
     (r/redirect url 307)
     (r/not-found "Not Found!")))
 
 (defn create-redirect [{{:keys [url]} :json-params}]
   (let [slug (generate-slug)]
-    (db/insert-redirect! db/mysql-db slug url)
+    (db/insert-redirect! db/conn slug url)
     (r/response {:slug slug
                  :url url})))
 
